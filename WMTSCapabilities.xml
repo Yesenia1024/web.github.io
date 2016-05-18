@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Capabilities version="1.0.0" xmlns="http://www.opengis.net/wmts/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wmts/1.0 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd">
+  <ServiceMetadataURL xlink:href="http://localhost/tileserver/1.0.0/WMTSCapabilities.xml"/>
+  <ows:ServiceIdentification>
+    <ows:ServiceType>OGC WMTS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    <ows:Title>Servicios OGC WMTS de Amazonas</ows:Title>
+    <ows:Abstract xml:lang="en">Servicios OGC WMTS de Amazonas</ows:Abstract>
+    <ows:Keywords>
+      <ows:Keyword>Amazonas, Colombia</ows:Keyword>
+    </ows:Keywords>
+    <ows:Fees>Ninguno</ows:Fees>
+    <ows:AccessConstraints>No se permite la desarga masiva de datos</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider>
+    <ows:ProviderName>Yesenia Sanchez Mira</ows:ProviderName>
+    <ows:ProviderSite xlink:href="http://localhost/tileserver/1.0.0/WMTSCapabilities.xml"/>
+  </ows:ServiceProvider>
+  <Contents>
+    <Layer>
+      <ows:Identifier>departamento</ows:Identifier>
+      <ows:Title>Mapa del Amazonas</ows:Title>
+      <ows:Abstract>Mapa base de amazonas a partir de datos OSM</ows:Abstract>
+      <ows:BoundingBox crs="urn:ogc:def:crs:EPSG:6.18.3:3857">
+        <ows:LowerCorner>-8281074.00991 -471155.021725</ows:LowerCorner>
+        <ows:UpperCorner>-7725077.3807 12308.6690514</ows:UpperCorner>
+      </ows:BoundingBox>
+      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
+        <ows:LowerCorner>-74.3901535203 -4.22861351884</ows:LowerCorner>
+        <ows:UpperCorner>-69.3955508209 0.110570586729</ows:UpperCorner>
+      </ows:WGS84BoundingBox>
+      <Style isDefault="true">
+        <ows:Identifier>default</ows:Identifier>
+      </Style>
+      <Format>image/jpeg</Format>
+      <TileMatrixSetLink>
+        <TileMatrixSet>z7to10</TileMatrixSet>
+      </TileMatrixSetLink>
+      <ResourceURL format="image/jpeg" resourceType="tile" template="http://localhost/tileserver/amazonas/{TileMatrix}/{TileCol}/{TileRow}.jpg"/>
+    </Layer>
+    <TileMatrixSet>
+      <ows:Identifier>z7to10</ows:Identifier>
+      <ows:SupportedCRS>urn:ogc:def:crs:EPSG:6.18.3:3857</ows:SupportedCRS>
+      <TileMatrix>
+        <ows:Identifier>7</ows:Identifier>
+        <ScaleDenominator>4367830.187724357471</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>128</MatrixWidth>
+        <MatrixHeight>128</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>8</ows:Identifier>
+        <ScaleDenominator>2183915.093862178735</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>256</MatrixWidth>
+        <MatrixHeight>256</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>9</ows:Identifier>
+        <ScaleDenominator>1091957.546931089368</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>512</MatrixWidth>
+        <MatrixHeight>512</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>10</ows:Identifier>
+        <ScaleDenominator>545978.773465544684</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>1024</MatrixWidth>
+        <MatrixHeight>1024</MatrixHeight>
+      </TileMatrix>
+    </TileMatrixSet>
+  </Contents>
+</Capabilities>
+
